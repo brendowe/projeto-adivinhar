@@ -1,5 +1,5 @@
 const botao = document.getElementsByClassName('btn');
-const imagem = document.getElementsByClassName('img');
+const imagem = document.getElementById('img');
 
 
 function numeroAleatorio() {
@@ -11,23 +11,33 @@ function numeroAleatorio() {
 botao[0].addEventListener('click', function(e) {
     e.preventDefault
     if(numeroAleatorio() == 0) {
-        alert('oi')
-    } else (alert('errou'))
+        imagem.src = "assets/images/acertou.jpg";
+    } else (imagem.src = "assets/images/errou.jpeg");
+    resetar()
 })
 
 
 botao[1].addEventListener('click', function(e) {
     e.preventDefault
     if(numeroAleatorio() == 1) {
-        alert('acerto')
-    } else (alert('errou'))
+        imagem.src = "assets/images/acertou.jpg";
+    } else (imagem.src = "assets/images/errou.jpeg");
+    resetar()
 })
 
 
 botao[2].addEventListener('click', function(e) {
     e.preventDefault
     if(numeroAleatorio() == 2) {
-        alert('obaobai')
-    } else (alert('errou'))
+        imagem.src = "assets/images/acertou.jpg";
+    } else (imagem.src = "assets/images/errou.jpeg");
+    resetar()
 })
 
+
+
+function resetar() {
+    setTimeout(() => {
+        imagem.src = "assets/images/pensando.jpg";
+    }, 2000)
+}
