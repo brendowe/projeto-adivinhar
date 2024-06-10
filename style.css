@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+html {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;  
+    height: 98vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: red;
+    height: 400px;
+    width: 300px;
+    text-align: center;
+}
+
+#img {
+    max-width: 300px;
+    max-height: 50%;
+}
+
+#botao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+
+.btn {
+    margin-top: 5px;
+    height: 40px;
+    width: 60px;
+}
